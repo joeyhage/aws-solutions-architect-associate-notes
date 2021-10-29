@@ -1,0 +1,54 @@
+site_name: AWS Certified Solutions Architect Associate (SAA-C02) Notes
+
+nav:
+  - 'Home': 'README.md'
+  - 'Design Resilient Architecture':
+    - 'Design a multi-tier architecture solution': '01-Design-Resilient-Architecture/01-Multi-tier-architecture.md'
+    - 'Design highly available and/or fault-tolerant architectures': '01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant.md'
+    - 'Design decoupling mechanisms using AWS services': '01-Design-Resilient-Architecture/03-Decoupling-mechanisms.md'
+    - 'Choose appropriate resilient storage': '01-Design-Resilient-Architecture/04-Resilient-storage.md'
+  - 'Design High-Performing Architectures':
+    - 'Identify elastic and scalable compute solutions for a workload': '02-Design-High-Performing-Architectures/01-Elastic-scalable-solutions.md'
+    - 'Select high-performing and scalable storage solutions for a workload': '02-Design-High-Performing-Architectures/02-High-performing-scalable-storage-solutions.md'
+    - 'Select high-performing networking solutions for a workload': '02-Design-High-Performing-Architectures/03-High-performing-networking-solutions.md'
+    - 'Choose high-performing database solutions for a workload': '02-Design-High-Performing-Architectures/04-High-performing-database-solutions.md'
+  - 'Design Secure Applications and Architectures':
+    - 'Design secure access to AWS resources': '03-Design-Secure-Applications-and-Architectures/01-Secure-access-to-resources.md'
+    - 'Design secure application tiers': '03-Design-Secure-Applications-and-Architectures/02-Secure-application-tiers.md'
+    - 'Select appropriate data security options': '03-Design-Secure-Applications-and-Architectures/03-Data-security-options.md'
+  - 'Design Cost-Optimized Architectures':
+    - 'Identify cost-effective storage solutions': '04-Design-Cost-Optimized-Architectures/01-Cost-effective-storage.md'
+    - 'Identify cost-effective compute and database services': '04-Design-Cost-Optimized-Architectures/02-Cost-effective-compute-and-database.md'
+    - 'Design cost-optimized network architectures': '04-Design-Cost-Optimized-Architectures/03-Cost-optimized-network-architectures.md'
+
+
+theme:
+  name: material
+  language: "en"
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: deep purple
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+  font:
+    text: Barlow
+    code: Roboto Mono
+
+docs_dir: notes
+
+markdown_extensions:
+  - mdx_truly_sane_lists

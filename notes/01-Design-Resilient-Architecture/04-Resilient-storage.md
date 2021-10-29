@@ -1,0 +1,1 @@
+# Choose appropriate resilient storage

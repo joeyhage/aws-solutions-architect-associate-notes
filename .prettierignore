@@ -1,0 +1,9 @@
+# Ignore artifacts:
+.github
+
+# Ignore specific file types
+*.json
+*.yml
+
+# Ignore specific files
+README.md
