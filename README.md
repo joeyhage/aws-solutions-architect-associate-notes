@@ -7,7 +7,7 @@
 
 ## Symbols
 
-- There are some symbols used throughout the documentation: (TODO)
+- There are some symbols used throughout the documentation:
 
   | Symbol | Description                                        |
   | :----: | -------------------------------------------------- |
