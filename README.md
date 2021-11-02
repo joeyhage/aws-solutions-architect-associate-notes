@@ -36,4 +36,12 @@
    2. [Identify cost-effective compute and database services](./notes/04-Design-Cost-Optimized-Architectures/02-Cost-effective-compute-and-database.md)
    3. [Design cost-optimized network architectures](./notes/04-Design-Cost-Optimized-Architectures/03-Cost-optimized-network-architectures.md)
 
+## Resources
+
+<a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/" target="_blank">https://aws.amazon.com/certification/certified-solutions-architect-associate/</a>
+
+<a href="./notes/Resources/AWS-Certified-Solutions-Architect-Associate_Exam-Guide.pdf" target="_blank">Exam Guide</a>
+
+<a href="./notes/Resources/AWS-Certified-Solutions-Architect-Associate_Sample-Questions.pdf" target="_blank">Sample Questions</a>
+
 [↑](#content)
