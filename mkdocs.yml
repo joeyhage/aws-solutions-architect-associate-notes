@@ -4,6 +4,7 @@ nav:
   - 'Home': 'README.md'
   - 'Cantrill Course Notes':
     - 'Course Fundamentals and AWS Accounts': 'Cantrill/Course-Fundamentals-and-AWS-Accounts.md'
+    - 'Cloud Computing Fundamentals': 'Cantrill/Cloud-Computing-Fundamentals.md'
   - 'Design Resilient Architecture':
     - 'Design a multi-tier architecture solution': '01-Design-Resilient-Architecture/01-Multi-tier-architecture.md'
     - 'Design highly available and/or fault-tolerant architectures': '01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant.md'
