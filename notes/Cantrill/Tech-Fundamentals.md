@@ -50,12 +50,11 @@
 
 ##### Frame
 
-Components:
 - **Preamble:** start of the frame
 - MAC header
   - **Destination MAC address**
   - **Source MAC address:** allows it to receive replies
-  - **Ether type (ET):** the layer 3 protocol is being used. Example: internet protocol (IP) 
+  - **Ether type (ET):** the layer 3 protocol is being used. Example: internet protocol (IP)
 - Payload
   - the data being sent via the layer 3 protocol
   - 46-1500 bytes
