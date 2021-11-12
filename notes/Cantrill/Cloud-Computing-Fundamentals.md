@@ -5,21 +5,21 @@
 5 characteristics per [NIST 800-145](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
 
 1. On-demand self-service
-   a. 📝 Can provision/terminate capabilities using UI/CLI as needed without requiring human interaction
+   1. 📝 Can provision/terminate capabilities using UI/CLI as needed without requiring human interaction
 2. Broad network access
-   a. 📝 Capabilities are available over the network, on any device, using standard protocols/mechanisms
+   1. 📝 Capabilities are available over the network, on any device, using standard protocols/mechanisms
 3. Resource pooling
-   a. Sense of location independence - no control or knowledge over exact location of the resources
-   b. Resources are pooled to serve multiple consumers using a multi-tenant model
-   c. 📝 Economies of scale, cheaper service
+   1. Sense of location independence - no control or knowledge over exact location of the resources
+   2. Resources are pooled to serve multiple consumers using a multi-tenant model
+   3. 📝 Economies of scale, cheaper service
 4. Rapid elasticity
-   a. Capabilities (resources) can be elastically provisioned and released to scale rapidly outward and inward with demand
-   b. To the consumer, capabilities available for provisioning _appear_ to be unlimited
-   c. **In Cantrill's opinion, the most important characteristic of cloud computing**
-   d. 📝 Scale up/out and down/in automatically in response to system load
+   1. Capabilities (resources) can be elastically provisioned and released to scale rapidly outward and inward with demand
+   2. To the consumer, capabilities available for provisioning _appear_ to be unlimited
+   3. **In Cantrill's opinion, the most important characteristic of cloud computing**
+   4. 📝 Scale up/out and down/in automatically in response to system load
 5. Measured service
-   a. Resource usage can be monitored, controlled, reported, and billed
-   b. 📝 Usage is measured - pay for what you use
+   1. Resource usage can be monitored, controlled, reported, and billed
+   2. 📝 Usage is measured - pay for what you use
 
 ## Public vs private vs hybrid vs multi cloud
 
