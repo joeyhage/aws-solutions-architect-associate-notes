@@ -38,7 +38,7 @@
 
 ## Cantrill Course
 
-[Cantrill Notes](./notes/Cantrill)
+[Cantrill Notes](./notes/Cantrill/Course-Fundamentals-and-AWS-Accounts.md)
 
 ## Resources
 
