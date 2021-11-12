@@ -38,9 +38,49 @@
 - no device to device communication
 - layer 1 is only practical when layer 2 is added on top
 
-#### Data Link (layer 2)
+#### Data link (layer 2)
 
-- One of the most critical layers
+- requires layer 1 (OSI higher layers rely on all layers below itself)
+- One of the most critical layers because it supports all data transfer
+- Detects and mitigates data collisions
+- Data link frame: format for sending information over a layer 2 network
+- Layer 2 introduces MAC address: uniquely assigned to a piece of hardware
+  - two parts: OUI (manufacturer) and network interface controller (NIC) specific
+  - MAC address should be globally unique
+
+##### Frame
+
+Components:
+- **Preamble:** start of the frame
+- MAC header
+  - **Destination MAC address**
+  - **Source MAC address:** allows it to receive replies
+  - **Ether type (ET):** the layer 3 protocol is being used. Example: internet protocol (IP) 
+- Payload
+  - the data being sent via the layer 3 protocol
+  - 46-1500 bytes
+- Frame check sequence (FCS)
+  - Cyclic redundancy check (CRC)
+  - Allows destination to check for accidental data errors/changes/corruption
+
+##### CSMA/CD
+
+- carrier sense multiple access (CSMA)
+  - check for carrier -> if no carrier, layer 1 takes the frame data and transmits
+- collision detection (CD)
+  - if collision is detected, a jam signal is sent by all devices and a random backoff occurs. Then it retries. Process repeats, with increasing backoffs, if necessary.
+- **encapsulation:** wrapping data inside something else (e.g. wrapping data in a frame)
+- **Unicast communication:** 1 to 1
+- **Broadcase communication**: 1 to all
+
+##### Example: Switches
+
+- Understands layer 2 
+- maintains a MAC address table and keeps track of addresses attached to which port
+- if it receives a frame and **knows** which port the destination address belongs to, it will send it to that port only
+- if it receives a frame and **does not know** which port the destination address belongs to, it will send it to all other ports
+- switches store the frame, forward it, and then discard it
+- switches do not forward collisions so each port is a separate collision domain which reduces collisions
 
 #### Network (layer 3)
 
