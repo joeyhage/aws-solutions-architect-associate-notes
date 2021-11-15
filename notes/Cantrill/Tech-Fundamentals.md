@@ -99,4 +99,8 @@
 
 #### Application (layer 7)
 
+### Decimal to IP Conversion (IP Addressing)
+
+- Dotted decimal notation (4 decimal numbers e.g. 127.0.0.1)
+
 
