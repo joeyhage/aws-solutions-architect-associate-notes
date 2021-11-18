@@ -116,7 +116,7 @@ IP addressing
 - subnet mask determines if the IP address is local or remote
   - if remote, it needs to use the default gateway
 
-![subnet mask examples](./Cantrill/images/subnet-mask.png)
+![subnet mask examples](./images/subnet-mask.png)
 
 ##### IPv6
 
@@ -126,8 +126,6 @@ packet fields (subset)
   - more space taken in the packet
 - data: from layer 4 protocol
 - Hop limit: max number of hops the packet can take before being discarded
-
-
 
 #### Transport (layer 4)
 
