@@ -47,6 +47,9 @@
 - Layer 2 introduces MAC address: uniquely assigned to a piece of hardware
   - two parts: OUI (manufacturer) and network interface controller (NIC) specific
   - MAC address should be globally unique
+- layer 2 networks can only communicate with other layer 2 networks that use the same protocol (e.g. ethernet)
+- most common protocol for local networks is ethernet
+  - long distance, point to point links use protocols like PPP/MPLS/ATM
 
 ##### Frame
 
@@ -82,6 +85,47 @@
 - switches do not forward collisions so each port is a separate collision domain which reduces collisions
 
 #### Network (layer 3)
+
+- Internet protocol (IP) is a layer 3 protocol
+  - add cross-network IP addressing and routing between LANs without direct P2P
+- routers are L3 devices that remove frame encapsulation and add new frame encapsulation at every hop
+
+##### L3 IP packet structure
+
+- destination and source addresses don't have to be in the same LAN like with L2
+- the frame changes for each LAN the frame is moving through
+  - **the packet doesn't change!**
+
+##### IPv4
+
+packet fields (only a subset that is relevant right now)
+
+- source and destination IP addresses
+- data: from layer 4 protocol
+- protocol: ICMP (1), TCP (6), UDP (17)
+- Time to live (TTL): max number of hops the packet can take before being discarded
+
+IP addressing
+
+- dotted decimal notation
+  - e.g. 127.0.0.1
+  - 4 decimals 0-255
+  - all IP addresses have a network and a host part
+    - the prefix (e.g. /24, /16) determines which is the network part and which is the host part
+  - two IP addresses are on the same IP network if the network part is the same
+- subnet mask determines if the IP address is local or remote
+  - if remote, it needs to use the default gateway
+
+![subnet mask examples](./Cantrill/images/subnet-mask.png)
+
+##### IPv6
+
+packet fields (subset)
+
+- source and destination IP addresses (bigger, more possible addresses)
+  - more space taken in the packet
+- data: from layer 4 protocol
+- Hop limit: max number of hops the packet can take before being discarded
 
 
 
