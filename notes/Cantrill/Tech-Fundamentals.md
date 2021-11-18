@@ -127,6 +127,18 @@ packet fields (subset)
 - data: from layer 4 protocol
 - Hop limit: max number of hops the packet can take before being discarded
 
+##### Route tables & routes
+
+- routers have one to many route tables
+  - a route table consists of a destination and the next hop/target to get there (e.g. the gateway to the network)
+- router chooses the most specific destination route
+  - that means whichever matches and has the highest prefix number because there are fewer host IP addresses
+- route tables have a default route that matches if nothing else does
+- border gateway protocol (BGP) allows routers to communicate to each other networks they know
+- routers wrap packets in frames and forward at layer 2
+
+![route tables and routes](./images/route-tables-routes.png)
+
 #### Transport (layer 4)
 
 
