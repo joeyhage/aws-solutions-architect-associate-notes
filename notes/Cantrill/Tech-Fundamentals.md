@@ -89,6 +89,9 @@
 - Internet protocol (IP) is a layer 3 protocol
   - add cross-network IP addressing and routing between LANs without direct P2P
 - routers are L3 devices that remove frame encapsulation and add new frame encapsulation at every hop
+- packets can be delivered out of order -> need layer 4 for this
+- cannot handle different channels of communication -> need layer 4 for this
+- no flow control - if dest device is slower, packet loss occurs
 
 ##### L3 IP packet structure
 
@@ -139,8 +142,56 @@ packet fields (subset)
 
 ![route tables and routes](./images/route-tables-routes.png)
 
+##### Address resolution protocol (ARP)
+
+- convert IP to MAC
+- needed because local network data is moved via L2 frames over L1
+- broadcasts to other devices: who has x.x.x.x IP address? ARP on other device responds with MAC address
+
 #### Transport (layer 4)
 
+Both are built in IP
+
+##### TCP
+
+- slower
+- reliable
+- bi-directional
+- **Segments/TCP header**
+  - encapsulated within packets
+  - TCP header contents:
+    - src port
+    - dest port
+    - sequence number (for ordering within a connection)
+    - acknowledgement (verify received up to a sequence number)
+    - flags 'n' things (close conn/sync/data offset)
+    - window (# of bytes between ack before sender stops and waits, used by receiving device as a form of flow control)
+    - checksum (detect errors)
+    - urgent pointer (set so TCP control traffic takes processing priority over other packets)
+    - options
+    - padding
+  - segment also includes the data 
+- uses random port on client, known port on server
+
+###### TCP Handshake
+
+- client sends SYN segment with start sequence (random #)
+- server responds with SYN-ACK segment with server start sequence and sets acknowledge to client start sequence +1
+- client sends ACK incrementing sequence header and acknowledgement header fields again
+
+###### TCP Sessions/state
+
+- stateless firewall - doensn't understand state of connection
+  - would need rule to allow outbound connection on port ? to ip/port ? and a rule to allow inbound connection from ip/port ? to port ?
+  - Example: AWS Network ACL
+- stateful firewall
+  - sees outbound from port ? to ip/port ? and implicitly allows inbound 
+  - Example: AWS Security Group
+
+##### UDP
+
+- fast
+- less-reliable
 
 
 #### Session (layer 5)
@@ -152,9 +203,5 @@ packet fields (subset)
 
 
 #### Application (layer 7)
-
-### Decimal to IP Conversion (IP Addressing)
-
-- Dotted decimal notation (4 decimal numbers e.g. 127.0.0.1)
 
 
