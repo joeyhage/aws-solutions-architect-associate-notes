@@ -205,3 +205,54 @@ Both are built in IP
 #### Application (layer 7)
 
 
+### Network Address Translation (NAT)
+
+- help with shortage of IPv4 addresses
+- some security benefits
+- translates private IPv4 to public
+
+#### Static NAT (AWS Internet Gateway IGW)
+
+- 1 private to 1 (fixed) public address
+- router (NAT device) maintains a NAT table
+
+#### Dynamic NAT
+
+- 1 private to 1st available public
+- used when have many private IPs and more than # of public IPs
+
+#### Port address translation PAT (AWS NATGW)
+
+- many private to 1 public (AWS NATGW)
+- most home networks
+- uses source (private) IP and source port, public IP and public source port
+
+### IP Addressing & Subnetting
+
+- Class A
+  - large networks
+  - 0.0.0.0 - 127.255.255.255
+  - 1.x.x.x - 127.x.x.x (16,777,216 IPs for each network)
+- Class B
+  - medium size networks
+  - 128.0.0.0 - 191.255.255.255
+  - 128.0.x.x - 191.255.x.x (65,536 IPs for each network)
+- Class B
+  - small networks
+  - 192.0.0.0 - 223.255.255.255
+  - 192.0.1.x - 223.255.255.x (256 IPs for each network)
+
+#### Private IPs
+
+- RFC1918
+- 10.0.0.0 - 10.255.255.255 (1 Class A network)
+- 172.16.0.0 - 172.31.255.255 (16 Class B networks)
+- 192.168.0.0 - 192.168.255.255 (256 Class C networks)
+
+#### IPv6
+
+- so many IP address management isn't really needed anymore
+
+#### Subnetting
+
+![subnetting](./images/subnetting.png)
