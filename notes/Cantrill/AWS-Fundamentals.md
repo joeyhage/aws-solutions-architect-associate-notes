@@ -91,3 +91,42 @@
 
 - Windows: Port 3389 (RDP)
 - Linux: Port 22 (SSH)
+
+## S3
+
+- global storage platform, but regional based/resilient
+  - replicated across AZs
+  - can be replicated across regions
+- public service, unlimited data, multi-user
+- great for large amounts of data
+
+### S3 objects
+
+- most of the time, an object is a file
+- objects have:
+  - 📝 **key** (i.e. filename)
+  - 📝 **value** (i.e. content being stored)
+  - 📝 **size**: can be 0 bytes to 5TB
+  - version id
+  - metadata
+  - access control
+  - sub-resources
+
+### S3 buckets
+
+- data inside a bucket has a primary region
+  - data doesn't leave a region unless configured to (data sovereignty)
+- 📝 bucket name must be globally unique
+  - between 3-63 characters, lowercase, no underscores
+  - start with lowercase letter or number
+  - can't be IP formatted
+- 📝 can hold unlimited number of objects
+- flat structure, not like a filesystem with folders
+  - object key prefixes make it seem otherwise
+- 📝 100 buckets per account soft limit, 1000 per account hard limit
+
+### Patterns and anti-patterns
+
+- S3 is an object store, not file (like windows) or block (like mount/volume on linux)
+- great for data 'offload'
+- input and/or output to many aws services

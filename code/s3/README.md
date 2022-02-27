@@ -13,8 +13,10 @@ The `cdk.json` file tells the CDK Toolkit how to execute your app.
 * `cdk diff`        compare deployed stack with current state
 * `cdk synth`       emits the synthesized CloudFormation template
 
-## EC2 management - AWS CLI
+## S3 management - AWS CLI
 
-- Start: `aws ec2 start-instances --instance-ids i-123`
-- Stop: `aws ec2 stop-instances --instance-ids i-123`
-- Terminate: `aws ec2 terminate-instances --instance-ids i-123`
+
+- List buckets: `aws s3api list-buckets`
+- List bucket objects: `aws s3api list-objects-v2 --bucket bucket_name`
+- Delete bucket: `aws s3api delete-bucket --bucket bucket_name`
+- Empty bucket: `aws s3 rm s3://bucket-name --recursive`
