@@ -77,7 +77,7 @@
 
 ##### Example: Switches
 
-- Understands layer 2 
+- Understands layer 2
 - maintains a MAC address table and keeps track of addresses attached to which port
 - if it receives a frame and **knows** which port the destination address belongs to, it will send it to that port only
 - if it receives a frame and **does not know** which port the destination address belongs to, it will send it to all other ports
@@ -99,7 +99,7 @@
 - the frame changes for each LAN the frame is moving through
   - **the packet doesn't change!**
 
-##### IPv4
+##### IPv4 packet
 
 packet fields (only a subset that is relevant right now)
 
@@ -121,7 +121,7 @@ IP addressing
 
 ![subnet mask examples](./images/subnet-mask.png)
 
-##### IPv6
+##### IPv6 packet
 
 packet fields (subset)
 
@@ -170,7 +170,7 @@ Both are built in IP
     - urgent pointer (set so TCP control traffic takes processing priority over other packets)
     - options
     - padding
-  - segment also includes the data 
+  - segment also includes the data
 - uses random port on client, known port on server
 
 ###### TCP Handshake
@@ -185,7 +185,7 @@ Both are built in IP
   - would need rule to allow outbound connection on port ? to ip/port ? and a rule to allow inbound connection from ip/port ? to port ?
   - Example: AWS Network ACL
 - stateful firewall
-  - sees outbound from port ? to ip/port ? and implicitly allows inbound 
+  - sees outbound from port ? to ip/port ? and implicitly allows inbound
   - Example: AWS Security Group
 
 ##### UDP
@@ -193,17 +193,11 @@ Both are built in IP
 - fast
 - less-reliable
 
-
 #### Session (layer 5)
-
-
 
 #### Presentation (layer 6)
 
-
-
 #### Application (layer 7)
-
 
 ### Network Address Translation (NAT)
 
@@ -251,8 +245,22 @@ Both are built in IP
 
 #### IPv6
 
-- so many IP address management isn't really needed anymore
+- management isn't needed anymore since there are so many IP address
 
 #### Subnetting
 
 ![subnetting](./images/subnetting.png)
+
+### DDoS
+
+- Application layer (HTTP flood)
+- Protocol attack (SYN flood)
+  - server hangs trying to make handshake with an IP address that was spoofed
+- Volumetric (DNS amplification)
+  - make large number of DNS requests where source address is IP address of legitimate website
+  - client devices need very little processing power for this type of attack
+
+#### How does an attacker do ths?
+
+- Control a network of compromised devices (botnet)
+- The botnet client devices make requests are cheap/fast but expensive/computationally intense for servers to handle
