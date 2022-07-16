@@ -130,3 +130,14 @@
 - S3 is an object store, not file (like windows) or block (like mount/volume on linux)
 - great for data 'offload'
 - input and/or output to many aws services
+
+## CloudFormation
+
+- Can be YAML or JSON
+- All templates must have at least one resource. `Resources` is only mandatory field in a template
+- 📝 `Description` must immediately follow `AWSTemplateFormatVersion` if `AWSTemplateFormatVersion` is included (`AWSTemplateFormatVersion` is an optional field)
+- `Mappings`: can create lookup tables, e.g. custom settings for different environments
+- `Conditions`: define boolean expressions that can be associated with resources to determine when to create the resource
+- `Resource` -> `Instance`: Logical resource, `Type` determines type of instance
+- Stack: implementation of a CloudFormation template
+- each logical resource is used to create a physical resource
