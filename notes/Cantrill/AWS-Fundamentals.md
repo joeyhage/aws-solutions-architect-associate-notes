@@ -141,3 +141,52 @@
 - `Resource` -> `Instance`: Logical resource, `Type` determines type of instance
 - Stack: implementation of a CloudFormation template
 - each logical resource is used to create a physical resource
+
+## CloudWatch
+
+- collects and manages operational data
+
+Three main products:
+
+- **Metrics**: monitoring of metrics and events based on metrics - from AWS, other cloud platforms, on-prem, etc
+
+- **Cloudwatch logs**: from AWS products, apps, on-premises
+
+- **Cloudwatch events**: from AWS services and schedules
+
+### Basics
+
+- Namespace: container for data
+- AWS namespaces look like AWS/{service}
+- Datapoint: timestamp and value
+- Dimension: name:value pairs for different things or perspectives within the same metric
+- Alarm
+   - associated with a metric
+   - Has bounds that determine when to be in OK or ALARM state
+   - Can take an action when in alarm state
+
+## Shared Responsibility Model
+
+- Customer is responsible for security "in" the cloud
+- AWS is responsible for security "of" the cloud
+
+![shared responsibility model](./images/shared-responsibility.png)
+
+## High-availability, fault-tolerance, disaster recovery
+
+### High-availability
+
+- ensure agreed upon performance, usually uptime, for a higher than normal period
+- 99.9% (three 9's) = 8.77 hrs/yr downtime
+- 99.999% (five 9's) = 5.26 mins/yr downtime
+- 📝 minimize any outages
+
+### Fault-tolerance
+
+- property that enables system to continue operating during one or more faults/failures in some components
+- 📝 operate through faults
+
+### Disaster recovery
+
+- policies, tools, procedures to enable recovery or continuation of vital infrastructure following natural/human-induced disaster
+- 📝 used when HA and FT don't work
