@@ -264,3 +264,19 @@ Both are built in IP
 
 - Control a network of compromised devices (botnet)
 - The botnet client devices make requests are cheap/fast but expensive/computationally intense for servers to handle
+
+## Hashing
+
+- examples: MD5, SHA256
+  - MD5 not recommended due to collisions (different data resulting in same hash)
+- turn data into **fixed length** representation
+- hash function is an algorithm
+- hash will be tiny regardless of size of data
+- any change to data will change hash value
+- one way only
+  - no way to reverse engineer hash back to data other than brute force and comparing (not realistic with modern hash functions)
+
+## Digital Signatures
+
+- Verify integrity and authenticity
+- sign with private key, verify with public key
