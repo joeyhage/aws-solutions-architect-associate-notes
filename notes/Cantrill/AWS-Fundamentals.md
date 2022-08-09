@@ -161,9 +161,9 @@ Three main products:
 - Datapoint: timestamp and value
 - Dimension: name:value pairs for different things or perspectives within the same metric
 - Alarm
-   - associated with a metric
-   - Has bounds that determine when to be in OK or ALARM state
-   - Can take an action when in alarm state
+  - associated with a metric
+  - Has bounds that determine when to be in OK or ALARM state
+  - Can take an action when in alarm state
 
 ## Shared Responsibility Model
 

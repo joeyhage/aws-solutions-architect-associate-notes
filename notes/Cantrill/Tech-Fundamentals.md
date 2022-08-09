@@ -280,3 +280,36 @@ Both are built in IP
 
 - Verify integrity and authenticity
 - sign with private key, verify with public key
+
+## DNS
+
+- each domain has a zone file that links the name (e.g. `www` subdomain) to an IP address.
+- Zonefile
+  - HOW the DNS data is stored
+  - physical database for the zone
+  - is hosted by a name server (NS)
+  - could be located anywhere so DNS resolver needs to be able to locate it so DNS client can query it
+- DNS resolver
+  - queries DNS so could be in DNS client, in router, or at ISP
+  - recursive resolver because it handles all the intermediate steps and returns result
+- Zone
+  - WHAT the DNS data is
+  - part of the DNS database (e.g. amazon.com)
+
+### DNS root
+
+- upside down tree, reads domain right to left
+- assumed period at the end (e.g. `.com` is actually `.com.`)
+- 13 DNS root servers, they don't manage the DNS database
+- operating system has root hints file that points to DNS root servers
+- root server accesses the root zone
+- root zone is managed by IANA
+  - IANA is in charge of DNS
+  - IANA is trusted because device is told to by root hints file
+- trusted = authority, authoritative
+- IANA is authoritative for the root zone
+- root zone delegates part to another zone and that other zone becomes authoritative for only the delegate portion
+- root database/zone handles TLDs
+  - generic/gTLD (e.g. `.com`, `.org`)
+  - country code/ccTLD (e.g. `.uk`)
+  - root zone delegates specific TLD to another zone
