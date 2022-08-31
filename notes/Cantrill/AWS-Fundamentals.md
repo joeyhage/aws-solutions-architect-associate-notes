@@ -78,13 +78,14 @@
 - When stopped, charged for: storage
 - When terminated, not charged
 
-### AMI
+### AMI (Amazon Machine Image)
 
 - permissions
   - public - everyone allowed to use (like default Linux/Windows AMIs)
   - owner - implicit allow
   - explicit - specific AWS accounts
-- root volume
+- boot volume
+- data volumes
 - block device volume
 
 ### Connecting to EC2
@@ -94,7 +95,7 @@
 
 ## S3
 
-- global storage platform, but regional based/resilient
+- global object storage platform, but regional based/resilient
   - replicated across AZs
   - can be replicated across regions
 - public service, unlimited data, multi-user
@@ -190,3 +191,21 @@ Three main products:
 
 - policies, tools, procedures to enable recovery or continuation of vital infrastructure following natural/human-induced disaster
 - 📝 used when HA and FT don't work
+
+### Route53
+
+- register domains through all major registries
+- creates and manages nameservers
+- **hosted zones:** zone files in AWS, hosted on four managed name servers
+  - can be public or private (linked to VPCs)
+
+- **Nameserver (NS)**: delegation of DNS
+- **A and AAAA:** host to IPv4 or IPv6, respectively
+- **CNAME:** host to host
+  - reduces admin overhead. e.g. designate www, email, and ftp subdomains to A record so if IPv4 changes, only A record has to be updated
+- **MX:** email record
+  - email server looks at domain of TO address and queries MX record
+  - lowest value has highest priority, iterates over records until successful
+- **TXT:** prove ownership of domain
+- **TTL:** cache records for specified number of seconds
+  - lengthy process to get result from authoritative source (nameserver)
