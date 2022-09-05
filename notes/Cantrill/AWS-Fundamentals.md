@@ -197,6 +197,7 @@ Three main products:
 - register domains through all major registries
 - creates and manages nameservers
 - **hosted zones:** zone files in AWS, hosted on four managed name servers
+
   - can be public or private (linked to VPCs)
 
 - **Nameserver (NS)**: delegation of DNS

@@ -7,6 +7,7 @@ nav:
     - 'Cloud Computing Fundamentals': 'Cantrill/Cloud-Computing-Fundamentals.md'
     - 'Tech Fundamentals': 'Cantrill/Tech-Fundamentals.md'
     - 'AWS Fundamentals': 'Cantrill/AWS-Fundamentals.md'
+    - 'IAM, Accounts and AWS Organizations': 'Cantrill/IAM-Accounts-AWS-Organizations.md'
   - 'Design Resilient Architecture':
     - 'Design a multi-tier architecture solution': '01-Design-Resilient-Architecture/01-Multi-tier-architecture.md'
     - 'Design highly available and/or fault-tolerant architectures': '01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant.md'
