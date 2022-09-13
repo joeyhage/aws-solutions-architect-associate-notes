@@ -3,11 +3,11 @@ site_name: AWS Certified Solutions Architect Associate (SAA-C02) Notes
 nav:
   - 'Home': 'README.md'
   - 'Cantrill Course Notes':
-    - 'Course Fundamentals and AWS Accounts': 'Cantrill/Course-Fundamentals-and-AWS-Accounts.md'
-    - 'Cloud Computing Fundamentals': 'Cantrill/Cloud-Computing-Fundamentals.md'
-    - 'Tech Fundamentals': 'Cantrill/Tech-Fundamentals.md'
-    - 'AWS Fundamentals': 'Cantrill/AWS-Fundamentals.md'
-    - 'IAM, Accounts and AWS Organizations': 'Cantrill/IAM-Accounts-AWS-Organizations.md'
+    - 'Course Fundamentals and AWS Accounts': 'Cantrill/01-Course-Fundamentals-and-AWS-Accounts.md'
+    - 'Cloud Computing Fundamentals': 'Cantrill/02-Cloud-Computing-Fundamentals.md'
+    - 'Tech Fundamentals': 'Cantrill/03-Tech-Fundamentals.md'
+    - 'AWS Fundamentals': 'Cantrill/04-AWS-Fundamentals.md'
+    - 'IAM, Accounts and AWS Organizations': 'Cantrill/05-IAM-Accounts-AWS-Organizations.md'
   - 'Design Resilient Architecture':
     - 'Design a multi-tier architecture solution': '01-Design-Resilient-Architecture/01-Multi-tier-architecture.md'
     - 'Design highly available and/or fault-tolerant architectures': '01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant.md'
