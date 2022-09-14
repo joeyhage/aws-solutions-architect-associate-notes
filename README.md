@@ -12,7 +12,7 @@
   | Symbol | Description                                        |
   | :----: | -------------------------------------------------- |
   | 💡     | Best practice or practical tips                    |
-  | ❗      | An important limitation, challenge or an exception |
+  | ❗     | An important limitation, challenge or an exception |
   | 📝     | Common exam area                                   |
 
 ## Content
