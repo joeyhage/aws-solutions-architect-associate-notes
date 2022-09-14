@@ -59,3 +59,25 @@
 - 📝 groups are not a true identity, cannot be referred to as a Principal or from an IAM policy
 
 ## IAM roles
+
+- identity used by multiple (or unknown number of) principals
+- roles are assumed when logging in, you become that role for a short period of time
+- can have two types of policies:
+  - **trust policy**: controls which identities can assume the role
+    - can reference identities in same account, other accounts, anonymous access, or other types using OIDC (Facebook, Google, etc)
+  - **permissions policy**: access policy specific to the role. policy is checked every time credentials are used so changes to permissions policy are immediate.
+- if trust policy allows access, identity receives temporary security credentials
+
+### When to use IAM roles
+
+- execution roles: avoids needing to hardcode credentials in code (e.g. Lambda execution role)
+- emergency roles: temporary, elevated access that is recorded/logged when used. "break glass" role
+- existing identities (ID federation): AD/SSO or > 5000 identities
+
+### Service linked roles and PassRole
+
+- linked to specific AWS service
+- predefined by service, service may create/delete role
+- provides permissions a service needs to interact with other AWS services
+- ❗ can't delete role until no longer required (distinction from IAM role)
+- PassRole: permission to provision service to use an existing service linked role
