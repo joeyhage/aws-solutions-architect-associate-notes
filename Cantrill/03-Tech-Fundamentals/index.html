@@ -1,0 +1,1857 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../02-Cloud-Computing-Fundamentals/">
+      
+      
+        <link rel="next" href="../04-AWS-Fundamentals/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Tech Fundamentals - AWS Certified Solutions Architect Associate (SAA-C02) Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#tech-fundamentals" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="AWS Certified Solutions Architect Associate (SAA-C02) Notes" class="md-header__button md-logo" aria-label="AWS Certified Solutions Architect Associate (SAA-C02) Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Certified Solutions Architect Associate (SAA-C02) Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tech Fundamentals
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+              </label>
+            
+          
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+              </label>
+            
+          
+        </form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="AWS Certified Solutions Architect Associate (SAA-C02) Notes" class="md-nav__button md-logo" aria-label="AWS Certified Solutions Architect Associate (SAA-C02) Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    AWS Certified Solutions Architect Associate (SAA-C02) Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          Cantrill Course Notes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Cantrill Course Notes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-Course-Fundamentals-and-AWS-Accounts/" class="md-nav__link">
+        Course Fundamentals and AWS Accounts
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-Cloud-Computing-Fundamentals/" class="md-nav__link">
+        Cloud Computing Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Tech Fundamentals
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Tech Fundamentals
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#networking-starter-pack" class="md-nav__link">
+    Networking Starter Pack
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking Starter Pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osi-7-layer-model" class="md-nav__link">
+    OSI 7-Layer Model
+  </a>
+  
+    <nav class="md-nav" aria-label="OSI 7-Layer Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media-layers" class="md-nav__link">
+    Media layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-layers" class="md-nav__link">
+    Host layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-layer-1" class="md-nav__link">
+    Physical (layer 1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical (layer 1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-hubs" class="md-nav__link">
+    Example: Hubs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-link-layer-2" class="md-nav__link">
+    Data link (layer 2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data link (layer 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame" class="md-nav__link">
+    Frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csmacd" class="md-nav__link">
+    CSMA/CD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-switches" class="md-nav__link">
+    Example: Switches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-layer-3" class="md-nav__link">
+    Network (layer 3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Network (layer 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l3-ip-packet-structure" class="md-nav__link">
+    L3 IP packet structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-packet" class="md-nav__link">
+    IPv4 packet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-packet" class="md-nav__link">
+    IPv6 packet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-tables-routes" class="md-nav__link">
+    Route tables &amp; routes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-resolution-protocol-arp" class="md-nav__link">
+    Address resolution protocol (ARP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-layer-4" class="md-nav__link">
+    Transport (layer 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Transport (layer 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-handshake" class="md-nav__link">
+    TCP Handshake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-sessionsstate" class="md-nav__link">
+    TCP Sessions/state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    UDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-layer-5" class="md-nav__link">
+    Session (layer 5)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentation-layer-6" class="md-nav__link">
+    Presentation (layer 6)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-layer-7" class="md-nav__link">
+    Application (layer 7)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-address-translation-nat" class="md-nav__link">
+    Network Address Translation (NAT)
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Address Translation (NAT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-nat-aws-internet-gateway-igw" class="md-nav__link">
+    Static NAT (AWS Internet Gateway IGW)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-nat" class="md-nav__link">
+    Dynamic NAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-address-translation-pat-aws-natgw" class="md-nav__link">
+    Port address translation PAT (AWS NATGW)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addressing-subnetting" class="md-nav__link">
+    IP Addressing &amp; Subnetting
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Addressing & Subnetting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-ips" class="md-nav__link">
+    Private IPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6" class="md-nav__link">
+    IPv6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    Subnetting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos" class="md-nav__link">
+    DDoS
+  </a>
+  
+    <nav class="md-nav" aria-label="DDoS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-an-attacker-do-ths" class="md-nav__link">
+    How does an attacker do ths?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-signatures" class="md-nav__link">
+    Digital Signatures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-root" class="md-nav__link">
+    DNS root
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-AWS-Fundamentals/" class="md-nav__link">
+        AWS Fundamentals
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-IAM-Accounts-AWS-Organizations/" class="md-nav__link">
+        IAM, Accounts and AWS Organizations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-Simple-Storage-Service-S3/" class="md-nav__link">
+        Simple Storage Service (S3)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-Virtual-Private-Cloud-VPC-Basics/" class="md-nav__link">
+        Virtual Private Cloud (VPC) Basics
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Design Resilient Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Design Resilient Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Design-Resilient-Architecture/01-Multi-tier-architecture/" class="md-nav__link">
+        Design a multi-tier architecture solution
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant/" class="md-nav__link">
+        Design highly available and/or fault-tolerant architectures
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Design-Resilient-Architecture/03-Decoupling-mechanisms/" class="md-nav__link">
+        Design decoupling mechanisms using AWS services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01-Design-Resilient-Architecture/04-Resilient-storage/" class="md-nav__link">
+        Choose appropriate resilient storage
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Design High-Performing Architectures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Design High-Performing Architectures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Design-High-Performing-Architectures/01-Elastic-scalable-solutions/" class="md-nav__link">
+        Identify elastic and scalable compute solutions for a workload
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Design-High-Performing-Architectures/02-High-performing-scalable-storage-solutions/" class="md-nav__link">
+        Select high-performing and scalable storage solutions for a workload
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Design-High-Performing-Architectures/03-High-performing-networking-solutions/" class="md-nav__link">
+        Select high-performing networking solutions for a workload
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02-Design-High-Performing-Architectures/04-High-performing-database-solutions/" class="md-nav__link">
+        Choose high-performing database solutions for a workload
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Design Secure Applications and Architectures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Design Secure Applications and Architectures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Design-Secure-Applications-and-Architectures/01-Secure-access-to-resources/" class="md-nav__link">
+        Design secure access to AWS resources
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Design-Secure-Applications-and-Architectures/02-Secure-application-tiers/" class="md-nav__link">
+        Design secure application tiers
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03-Design-Secure-Applications-and-Architectures/03-Data-security-options/" class="md-nav__link">
+        Select appropriate data security options
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Design Cost-Optimized Architectures
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Design Cost-Optimized Architectures
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Design-Cost-Optimized-Architectures/01-Cost-effective-storage/" class="md-nav__link">
+        Identify cost-effective storage solutions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Design-Cost-Optimized-Architectures/02-Cost-effective-compute-and-database/" class="md-nav__link">
+        Identify cost-effective compute and database services
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04-Design-Cost-Optimized-Architectures/03-Cost-optimized-network-architectures/" class="md-nav__link">
+        Design cost-optimized network architectures
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#networking-starter-pack" class="md-nav__link">
+    Networking Starter Pack
+  </a>
+  
+    <nav class="md-nav" aria-label="Networking Starter Pack">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osi-7-layer-model" class="md-nav__link">
+    OSI 7-Layer Model
+  </a>
+  
+    <nav class="md-nav" aria-label="OSI 7-Layer Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#media-layers" class="md-nav__link">
+    Media layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#host-layers" class="md-nav__link">
+    Host layers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#physical-layer-1" class="md-nav__link">
+    Physical (layer 1)
+  </a>
+  
+    <nav class="md-nav" aria-label="Physical (layer 1)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    Overview
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-hubs" class="md-nav__link">
+    Example: Hubs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-link-layer-2" class="md-nav__link">
+    Data link (layer 2)
+  </a>
+  
+    <nav class="md-nav" aria-label="Data link (layer 2)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#frame" class="md-nav__link">
+    Frame
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#csmacd" class="md-nav__link">
+    CSMA/CD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-switches" class="md-nav__link">
+    Example: Switches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-layer-3" class="md-nav__link">
+    Network (layer 3)
+  </a>
+  
+    <nav class="md-nav" aria-label="Network (layer 3)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#l3-ip-packet-structure" class="md-nav__link">
+    L3 IP packet structure
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv4-packet" class="md-nav__link">
+    IPv4 packet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6-packet" class="md-nav__link">
+    IPv6 packet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#route-tables-routes" class="md-nav__link">
+    Route tables &amp; routes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#address-resolution-protocol-arp" class="md-nav__link">
+    Address resolution protocol (ARP)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transport-layer-4" class="md-nav__link">
+    Transport (layer 4)
+  </a>
+  
+    <nav class="md-nav" aria-label="Transport (layer 4)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp" class="md-nav__link">
+    TCP
+  </a>
+  
+    <nav class="md-nav" aria-label="TCP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tcp-handshake" class="md-nav__link">
+    TCP Handshake
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tcp-sessionsstate" class="md-nav__link">
+    TCP Sessions/state
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#udp" class="md-nav__link">
+    UDP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#session-layer-5" class="md-nav__link">
+    Session (layer 5)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#presentation-layer-6" class="md-nav__link">
+    Presentation (layer 6)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#application-layer-7" class="md-nav__link">
+    Application (layer 7)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network-address-translation-nat" class="md-nav__link">
+    Network Address Translation (NAT)
+  </a>
+  
+    <nav class="md-nav" aria-label="Network Address Translation (NAT)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#static-nat-aws-internet-gateway-igw" class="md-nav__link">
+    Static NAT (AWS Internet Gateway IGW)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-nat" class="md-nav__link">
+    Dynamic NAT
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#port-address-translation-pat-aws-natgw" class="md-nav__link">
+    Port address translation PAT (AWS NATGW)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ip-addressing-subnetting" class="md-nav__link">
+    IP Addressing &amp; Subnetting
+  </a>
+  
+    <nav class="md-nav" aria-label="IP Addressing & Subnetting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#private-ips" class="md-nav__link">
+    Private IPs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ipv6" class="md-nav__link">
+    IPv6
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#subnetting" class="md-nav__link">
+    Subnetting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ddos" class="md-nav__link">
+    DDoS
+  </a>
+  
+    <nav class="md-nav" aria-label="DDoS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-does-an-attacker-do-ths" class="md-nav__link">
+    How does an attacker do ths?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing" class="md-nav__link">
+    Hashing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#digital-signatures" class="md-nav__link">
+    Digital Signatures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns" class="md-nav__link">
+    DNS
+  </a>
+  
+    <nav class="md-nav" aria-label="DNS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dns-root" class="md-nav__link">
+    DNS root
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="tech-fundamentals">Tech Fundamentals</h1>
+<h2 id="networking-starter-pack">Networking Starter Pack</h2>
+<h3 id="osi-7-layer-model">OSI 7-Layer Model</h3>
+<p><a href="https://en.wikipedia.org/wiki/OSI_model">https://en.wikipedia.org/wiki/OSI_model</a></p>
+<p>💡 A layer 1 device only understands layer 1 whereas a layer 3 device understands layers 1, 2, and 3</p>
+<h4 id="media-layers">Media layers</h4>
+<ul>
+<li>Physical, data link, network</li>
+<li>Dealing with how data is moved between point A and point B</li>
+</ul>
+<h4 id="host-layers">Host layers</h4>
+<ul>
+<li>Transport, session, presentation, application</li>
+<li>How data is chunked/grouped and reassembled as well as formatted so it can be understood</li>
+</ul>
+<h4 id="physical-layer-1">Physical (layer 1)</h4>
+<h5 id="overview">Overview</h5>
+<ul>
+<li>Transmission and reception of raw bit streams (zeros and ones) between a device and a shared physical medium</li>
+<li>Physical medium can be copper (electrical), fiber (light), or WIFI (radio frequency)</li>
+<li>Defines voltage levels, timing, rates, distances, modulation, and connectors</li>
+</ul>
+<h5 id="example-hubs">Example: Hubs</h5>
+<ul>
+<li>Anything which a hub receives on any port is re-transmitted on all other ports, including errors and collisions</li>
+<li>At layer one, no individual device addresses</li>
+<li>If multiple devices transmit at once, a collision occurs and all information is useless</li>
+<li>No media access control. i.e. cannot control which devices are allowed to transmit</li>
+<li>Collisions are almost guaranteed - likelihood increases with # of devices</li>
+<li>layer 1 cannot detect when collisions occur</li>
+<li>layer 1 networks do not scale well</li>
+<li>no device to device communication</li>
+<li>layer 1 is only practical when layer 2 is added on top</li>
+</ul>
+<h4 id="data-link-layer-2">Data link (layer 2)</h4>
+<ul>
+<li>requires layer 1 (OSI higher layers rely on all layers below itself)</li>
+<li>One of the most critical layers because it supports all data transfer</li>
+<li>Detects and mitigates data collisions</li>
+<li>Data link frame: format for sending information over a layer 2 network</li>
+<li>Layer 2 introduces MAC address: uniquely assigned to a piece of hardware<ul>
+<li>two parts: OUI (manufacturer) and network interface controller (NIC) specific</li>
+<li>MAC address should be globally unique</li>
+</ul>
+</li>
+<li>layer 2 networks can only communicate with other layer 2 networks that use the same protocol (e.g. ethernet)</li>
+<li>most common protocol for local networks is ethernet<ul>
+<li>long distance, point to point links use protocols like PPP/MPLS/ATM</li>
+</ul>
+</li>
+</ul>
+<h5 id="frame">Frame</h5>
+<ul>
+<li><strong>Preamble:</strong> start of the frame</li>
+<li>MAC header<ul>
+<li><strong>Destination MAC address</strong></li>
+<li><strong>Source MAC address:</strong> allows it to receive replies</li>
+<li><strong>Ether type (ET):</strong> the layer 3 protocol is being used. Example: internet protocol (IP)</li>
+</ul>
+</li>
+<li>Payload<ul>
+<li>the data being sent via the layer 3 protocol</li>
+<li>46-1500 bytes</li>
+</ul>
+</li>
+<li>Frame check sequence (FCS)<ul>
+<li>Cyclic redundancy check (CRC)</li>
+<li>Allows destination to check for accidental data errors/changes/corruption</li>
+</ul>
+</li>
+</ul>
+<h5 id="csmacd">CSMA/CD</h5>
+<ul>
+<li>carrier sense multiple access (CSMA)<ul>
+<li>check for carrier -&gt; if no carrier, layer 1 takes the frame data and transmits</li>
+</ul>
+</li>
+<li>collision detection (CD)<ul>
+<li>if collision is detected, a jam signal is sent by all devices and a random backoff occurs. Then it retries. Process repeats, with increasing backoffs, if necessary.</li>
+</ul>
+</li>
+<li><strong>encapsulation:</strong> wrapping data inside something else (e.g. wrapping data in a frame)</li>
+<li><strong>Unicast communication:</strong> 1 to 1</li>
+<li><strong>Broadcase communication</strong>: 1 to all</li>
+</ul>
+<h5 id="example-switches">Example: Switches</h5>
+<ul>
+<li>Understands layer 2</li>
+<li>maintains a MAC address table and keeps track of addresses attached to which port</li>
+<li>if it receives a frame and <strong>knows</strong> which port the destination address belongs to, it will send it to that port only</li>
+<li>if it receives a frame and <strong>does not know</strong> which port the destination address belongs to, it will send it to all other ports</li>
+<li>switches store the frame, forward it, and then discard it</li>
+<li>switches do not forward collisions so each port is a separate collision domain which reduces collisions</li>
+</ul>
+<h4 id="network-layer-3">Network (layer 3)</h4>
+<ul>
+<li>Internet protocol (IP) is a layer 3 protocol<ul>
+<li>add cross-network IP addressing and routing between LANs without direct P2P</li>
+</ul>
+</li>
+<li>routers are L3 devices that remove frame encapsulation and add new frame encapsulation at every hop</li>
+<li>packets can be delivered out of order -&gt; need layer 4 for this</li>
+<li>cannot handle different channels of communication -&gt; need layer 4 for this</li>
+<li>no flow control - if dest device is slower, packet loss occurs</li>
+</ul>
+<h5 id="l3-ip-packet-structure">L3 IP packet structure</h5>
+<ul>
+<li>destination and source addresses don't have to be in the same LAN like with L2</li>
+<li>the frame changes for each LAN the frame is moving through<ul>
+<li><strong>the packet doesn't change!</strong></li>
+</ul>
+</li>
+</ul>
+<h5 id="ipv4-packet">IPv4 packet</h5>
+<p>packet fields (only a subset that is relevant right now)</p>
+<ul>
+<li>source and destination IP addresses</li>
+<li>data: from layer 4 protocol</li>
+<li>protocol: ICMP (1), TCP (6), UDP (17)</li>
+<li>Time to live (TTL): max number of hops the packet can take before being discarded</li>
+</ul>
+<p>IP addressing</p>
+<ul>
+<li>dotted decimal notation<ul>
+<li>e.g. 127.0.0.1</li>
+<li>4 decimals 0-255</li>
+<li>all IP addresses have a network and a host part<ul>
+<li>the prefix (e.g. /24, /16) determines which is the network part and which is the host part</li>
+</ul>
+</li>
+<li>two IP addresses are on the same IP network if the network part is the same</li>
+</ul>
+</li>
+<li>subnet mask determines if the IP address is local or remote<ul>
+<li>if remote, it needs to use the default gateway</li>
+</ul>
+</li>
+</ul>
+<p><img alt="subnet mask examples" src="../images/subnet-mask.png" /></p>
+<h5 id="ipv6-packet">IPv6 packet</h5>
+<p>packet fields (subset)</p>
+<ul>
+<li>source and destination IP addresses (bigger, more possible addresses)<ul>
+<li>more space taken in the packet</li>
+</ul>
+</li>
+<li>data: from layer 4 protocol</li>
+<li>Hop limit: max number of hops the packet can take before being discarded</li>
+</ul>
+<h5 id="route-tables-routes">Route tables &amp; routes</h5>
+<ul>
+<li>routers have one to many route tables<ul>
+<li>a route table consists of a destination and the next hop/target to get there (e.g. the gateway to the network)</li>
+</ul>
+</li>
+<li>router chooses the most specific destination route<ul>
+<li>that means whichever matches and has the highest prefix number because there are fewer host IP addresses</li>
+</ul>
+</li>
+<li>route tables have a default route that matches if nothing else does</li>
+<li>border gateway protocol (BGP) allows routers to communicate to each other networks they know</li>
+<li>routers wrap packets in frames and forward at layer 2</li>
+</ul>
+<p><img alt="route tables and routes" src="../images/route-tables-routes.png" /></p>
+<h5 id="address-resolution-protocol-arp">Address resolution protocol (ARP)</h5>
+<ul>
+<li>convert IP to MAC</li>
+<li>needed because local network data is moved via L2 frames over L1</li>
+<li>broadcasts to other devices: who has x.x.x.x IP address? ARP on other device responds with MAC address</li>
+</ul>
+<h4 id="transport-layer-4">Transport (layer 4)</h4>
+<p>Both are built in IP</p>
+<h5 id="tcp">TCP</h5>
+<ul>
+<li>slower</li>
+<li>reliable</li>
+<li>bi-directional</li>
+<li><strong>Segments/TCP header</strong><ul>
+<li>encapsulated within packets</li>
+<li>TCP header contents:<ul>
+<li>src port</li>
+<li>dest port</li>
+<li>sequence number (for ordering within a connection)</li>
+<li>acknowledgement (verify received up to a sequence number)</li>
+<li>flags 'n' things (close conn/sync/data offset)</li>
+<li>window (# of bytes between ack before sender stops and waits, used by receiving device as a form of flow control)</li>
+<li>checksum (detect errors)</li>
+<li>urgent pointer (set so TCP control traffic takes processing priority over other packets)</li>
+<li>options</li>
+<li>padding</li>
+</ul>
+</li>
+<li>segment also includes the data</li>
+</ul>
+</li>
+<li>uses random port on client, known port on server</li>
+</ul>
+<h6 id="tcp-handshake">TCP Handshake</h6>
+<ul>
+<li>client sends SYN segment with start sequence (random #)</li>
+<li>server responds with SYN-ACK segment with server start sequence and sets acknowledge to client start sequence +1</li>
+<li>client sends ACK incrementing sequence header and acknowledgement header fields again</li>
+</ul>
+<h6 id="tcp-sessionsstate">TCP Sessions/state</h6>
+<ul>
+<li>stateless firewall - doensn't understand state of connection<ul>
+<li>would need rule to allow outbound connection on port ? to ip/port ? and a rule to allow inbound connection from ip/port ? to port ?</li>
+<li>Example: AWS Network ACL</li>
+</ul>
+</li>
+<li>stateful firewall<ul>
+<li>sees outbound from port ? to ip/port ? and implicitly allows inbound</li>
+<li>Example: AWS Security Group</li>
+</ul>
+</li>
+</ul>
+<h5 id="udp">UDP</h5>
+<ul>
+<li>fast</li>
+<li>less-reliable</li>
+</ul>
+<h4 id="session-layer-5">Session (layer 5)</h4>
+<h4 id="presentation-layer-6">Presentation (layer 6)</h4>
+<h4 id="application-layer-7">Application (layer 7)</h4>
+<h3 id="network-address-translation-nat">Network Address Translation (NAT)</h3>
+<ul>
+<li>help with shortage of IPv4 addresses</li>
+<li>some security benefits</li>
+<li>translates private IPv4 to public</li>
+</ul>
+<h4 id="static-nat-aws-internet-gateway-igw">Static NAT (AWS Internet Gateway IGW)</h4>
+<ul>
+<li>1 private to 1 (fixed) public address</li>
+<li>router (NAT device) maintains a NAT table</li>
+</ul>
+<h4 id="dynamic-nat">Dynamic NAT</h4>
+<ul>
+<li>1 private to 1st available public</li>
+<li>used when have many private IPs and more than # of public IPs</li>
+</ul>
+<h4 id="port-address-translation-pat-aws-natgw">Port address translation PAT (AWS NATGW)</h4>
+<ul>
+<li>many private to 1 public (AWS NATGW)</li>
+<li>most home networks</li>
+<li>uses source (private) IP and source port, public IP and public source port</li>
+</ul>
+<h3 id="ip-addressing-subnetting">IP Addressing &amp; Subnetting</h3>
+<ul>
+<li>Class A<ul>
+<li>large networks</li>
+<li>0.0.0.0 - 127.255.255.255</li>
+<li>1.x.x.x - 127.x.x.x (16,777,216 IPs for each network)</li>
+</ul>
+</li>
+<li>Class B<ul>
+<li>medium size networks</li>
+<li>128.0.0.0 - 191.255.255.255</li>
+<li>128.0.x.x - 191.255.x.x (65,536 IPs for each network)</li>
+</ul>
+</li>
+<li>Class B<ul>
+<li>small networks</li>
+<li>192.0.0.0 - 223.255.255.255</li>
+<li>192.0.1.x - 223.255.255.x (256 IPs for each network)</li>
+</ul>
+</li>
+</ul>
+<h4 id="private-ips">Private IPs</h4>
+<ul>
+<li>RFC1918</li>
+<li>10.0.0.0 - 10.255.255.255 (1 Class A network)</li>
+<li>172.16.0.0 - 172.31.255.255 (16 Class B networks)</li>
+<li>192.168.0.0 - 192.168.255.255 (256 Class C networks)</li>
+</ul>
+<h4 id="ipv6">IPv6</h4>
+<ul>
+<li>management isn't needed anymore since there are so many IP address</li>
+</ul>
+<h4 id="subnetting">Subnetting</h4>
+<p><img alt="subnetting" src="../images/subnetting.png" /></p>
+<h3 id="ddos">DDoS</h3>
+<ul>
+<li>Application layer (HTTP flood)</li>
+<li>Protocol attack (SYN flood)<ul>
+<li>server hangs trying to make handshake with an IP address that was spoofed</li>
+</ul>
+</li>
+<li>Volumetric (DNS amplification)<ul>
+<li>make large number of DNS requests where source address is IP address of legitimate website</li>
+<li>client devices need very little processing power for this type of attack</li>
+</ul>
+</li>
+</ul>
+<h4 id="how-does-an-attacker-do-ths">How does an attacker do ths?</h4>
+<ul>
+<li>Control a network of compromised devices (botnet)</li>
+<li>The botnet client devices make requests are cheap/fast but expensive/computationally intense for servers to handle</li>
+</ul>
+<h2 id="hashing">Hashing</h2>
+<ul>
+<li>examples: MD5, SHA256<ul>
+<li>MD5 not recommended due to collisions (different data resulting in same hash)</li>
+</ul>
+</li>
+<li>turn data into <strong>fixed length</strong> representation</li>
+<li>hash function is an algorithm</li>
+<li>hash will be tiny regardless of size of data</li>
+<li>any change to data will change hash value</li>
+<li>one way only<ul>
+<li>no way to reverse engineer hash back to data other than brute force and comparing (not realistic with modern hash functions)</li>
+</ul>
+</li>
+</ul>
+<h2 id="digital-signatures">Digital Signatures</h2>
+<ul>
+<li>Verify integrity and authenticity</li>
+<li>sign with private key, verify with public key</li>
+</ul>
+<h2 id="dns">DNS</h2>
+<ul>
+<li>each domain has a zone file that links the name (e.g. <code>www</code> subdomain) to an IP address.</li>
+<li>Zonefile<ul>
+<li>HOW the DNS data is stored</li>
+<li>physical database for the zone</li>
+<li>is hosted by a name server (NS)</li>
+<li>could be located anywhere so DNS resolver needs to be able to locate it so DNS client can query it</li>
+</ul>
+</li>
+<li>DNS resolver<ul>
+<li>queries DNS so could be in DNS client, in router, or at ISP</li>
+<li>recursive resolver because it handles all the intermediate steps and returns result</li>
+</ul>
+</li>
+<li>Zone<ul>
+<li>WHAT the DNS data is</li>
+<li>part of the DNS database (e.g. amazon.com)</li>
+</ul>
+</li>
+</ul>
+<h3 id="dns-root">DNS root</h3>
+<ul>
+<li>upside down tree, reads domain right to left</li>
+<li>assumed period at the end (e.g. <code>.com</code> is actually <code>.com.</code>)</li>
+<li>13 DNS root servers, they don't manage the DNS database</li>
+<li>operating system has root hints file that points to DNS root servers</li>
+<li>root server accesses the root zone</li>
+<li>root zone is managed by IANA<ul>
+<li>IANA is in charge of DNS</li>
+<li>IANA is trusted because device is told to by root hints file</li>
+</ul>
+</li>
+<li>trusted = authority, authoritative</li>
+<li>IANA is authoritative for the root zone</li>
+<li>root zone delegates part to another zone and that other zone becomes authoritative for only the delegate portion</li>
+<li>root database/zone handles TLDs<ul>
+<li>generic/gTLD (e.g. <code>.com</code>, <code>.org</code>)</li>
+<li>country code/ccTLD (e.g. <code>.uk</code>)</li>
+<li>root zone delegates specific TLD to another zone</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
