@@ -8,6 +8,8 @@ nav:
     - 'Tech Fundamentals': 'Cantrill/03-Tech-Fundamentals.md'
     - 'AWS Fundamentals': 'Cantrill/04-AWS-Fundamentals.md'
     - 'IAM, Accounts and AWS Organizations': 'Cantrill/05-IAM-Accounts-AWS-Organizations.md'
+    - 'Simple Storage Service (S3)': 'Cantrill/06-Simple-Storage-Service-S3.md'
+    - 'Virtual Private Cloud (VPC) Basics': 'Cantrill/07-Virtual-Private-Cloud-VPC-Basics.md'
   - 'Design Resilient Architecture':
     - 'Design a multi-tier architecture solution': '01-Design-Resilient-Architecture/01-Multi-tier-architecture.md'
     - 'Design highly available and/or fault-tolerant architectures': '01-Design-Resilient-Architecture/02-Highly-available-fault-tolerant.md'

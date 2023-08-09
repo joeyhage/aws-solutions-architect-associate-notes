@@ -81,3 +81,10 @@
 - provides permissions a service needs to interact with other AWS services
 - ❗ can't delete role until no longer required (distinction from IAM role)
 - PassRole: permission to provision service to use an existing service linked role
+
+## AWS Organizations
+
+- Have one organization main/master/management/payer account and zero to many member accounts
+- Consolidated billing means one bill for all AWS accounts
+- Consolidates reservations and volume discounts
+- Best practice: use IAM roles, store all identities in a single identity account or use federation with that one identity account
